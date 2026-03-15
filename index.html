@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahya Abbas — AI Researcher</title>
+    <meta name="description" content="Yahya Abbas — MASc student at Concordia University researching LLM-based fairness auditing, scalable AI oversight, and trustworthy AI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --body: #3d3d3d;
+            --muted: #6b6b6b;
+            --border: #d4d0c8;
+            --cream: #faf8f5;
+            --warm-white: #ffffff;
+            --accent: #2c5f7c;
+            --accent-light: #e8f0f5;
+            --serif: 'Source Serif 4', 'Georgia', serif;
+            --sans: 'DM Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--body);
+            background: var(--cream);
+            line-height: 1.7;
+            font-size: 15.5px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        /* ---- Header ---- */
+        .header {
+            display: flex;
+            gap: 36px;
+            align-items: flex-start;
+            margin-bottom: 48px;
+        }
+
+        .headshot {
+            width: 148px;
+            height: 148px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 3px solid var(--border);
+            background: var(--accent-light);
+        }
+
+        .header-text h1 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .header-text .subtitle {
+            font-size: 1.02rem;
+            color: var(--muted);
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            font-size: 0.88rem;
+        }
+
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: var(--ink);
+        }
+
+        .contact-links .sep {
+            color: var(--border);
+            user-select: none;
+        }
+
+        /* ---- Sections ---- */
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-family: var(--serif);
+            font-size: 1.18rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 14px;
+            padding-bottom: 6px;
+            border-bottom: 1.5px solid var(--border);
+            letter-spacing: -0.01em;
+        }
+
+        section p {
+            margin-bottom: 12px;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .interest-tag {
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 3px;
+            letter-spacing: 0.01em;
+        }
+
+        /* ---- Publications ---- */
+        .pub-item {
+            margin-bottom: 16px;
+            padding-left: 16px;
+            border-left: 2.5px solid var(--border);
+        }
+
+        .pub-item:hover {
+            border-left-color: var(--accent);
+        }
+
+        .pub-item .pub-title {
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .pub-item .pub-authors {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .pub-item .pub-venue {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--muted);
+        }
+
+        .pub-item .pub-links a {
+            font-size: 0.82rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 14px;
+        }
+
+        .pub-item .pub-links a:hover {
+            text-decoration: underline;
+        }
+
+        .pub-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        .badge-patent {
+            background: #fef3cd;
+            color: #856404;
+        }
+
+        /* ---- News / Updates ---- */
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 10px;
+            font-size: 0.93rem;
+        }
+
+        .news-date {
+            color: var(--muted);
+            font-size: 0.84rem;
+            flex-shrink: 0;
+            width: 80px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* ---- Footer ---- */
+        footer {
+            margin-top: 56px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.82rem;
+            color: var(--muted);
+            text-align: center;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .contact-links {
+                justify-content: center;
+            }
+            .header-text h1 {
+                font-size: 1.6rem;
+            }
+            .page {
+                padding: 36px 18px 60px;
+            }
+            .news-list li {
+                flex-direction: column;
+                gap: 2px;
+            }
+            .news-date {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- Header -->
+        <header class="header">
+            <img src="headshot.png" alt="Yahya Abbas" class="headshot">
+            <div class="header-text">
+                <h1>Yahya Abbas</h1>
+                <div class="subtitle">
+                    MASc Student in Electrical &amp; Computer Engineering<br>
+                    Concordia University, Montréal
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:yahya-abbas@outlook.com">Email</a>
+                    <span class="sep">·</span>
+                    <a href="https://www.linkedin.com/in/yahya-abbas/" target="_blank">LinkedIn</a>
+                    <span class="sep">·</span>
+                    <a href="https://github.com/Yahya-Abbas" target="_blank">GitHub</a>
+                    <span class="sep">·</span>
+                    <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                    <span class="sep">·</span>
+                    <a href="YahyaAbbas_CV.pdf" target="_blank">CV (PDF)</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section>
+            <h2>About</h2>
+            <p>
+                I am a Master's student in Electrical and Computer Engineering at Concordia University (GPA: 4.3/4.3), with research interests in deep learning, large language models, and computer vision. My work has spanned neural network compression, generative adversarial networks, probabilistic forecasting, and most recently, trustworthy AI.
+            </p>
+            <p>
+                My current research investigates whether LLMs can serve as reliable co-auditors for machine learning fairness — evaluating their ability to recommend appropriate metrics and identify issues across diverse application contexts. This sits at the intersection of LLM evaluation and scalable AI oversight, a challenge that grows more pressing as AI systems become more capable.
+            </p>
+            <p>
+                Before graduate school, I spent two years as a Data Scientist at Dell Technologies, where I led research on conditional GANs for synthetic 5G traffic generation (U.S. patent pending) and built deep learning forecasting models for multi-city telecom networks. My BSc thesis at the American University in Cairo introduced a multi-knowledge distillation framework for neural network compression, later published in IJCDS.
+            </p>
+
+            <div class="interests">
+                <span class="interest-tag">Deep Learning</span>
+                <span class="interest-tag">Large Language Models</span>
+                <span class="interest-tag">Computer Vision</span>
+                <span class="interest-tag">Generative Models</span>
+                <span class="interest-tag">Trustworthy AI</span>
+                <span class="interest-tag">Neural Network Compression</span>
+            </div>
+        </section>
+
+        <!-- News -->
+        <section>
+            <h2>News</h2>
+            <ul class="news-list">
+                <li>
+                    <span class="news-date">Jul 2025</span>
+                    <span>Awarded the CAE Scholarship in Engineering Excellence at Concordia University.</span>
+                </li>
+                <li>
+                    <span class="news-date">Jan 2025</span>
+                    <span>Paper accepted: <em>ModReduce: A Multi-Knowledge Distillation Framework</em> published in IJCDS.</span>
+                </li>
+                <li>
+                    <span class="news-date">Sep 2024</span>
+                    <span>Started MASc at Concordia University with a Merit Scholarship. Researching LLM-based fairness auditing.</span>
+                </li>
+                <li>
+                    <span class="news-date">2024</span>
+                    <span>U.S. patent application filed for synthetic wireless traffic data generation (Dell Technologies).</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Publications -->
+        <section>
+            <h2>Publications &amp; Patents</h2>
+
+            <div class="pub-item">
+                <div class="pub-title">ModReduce: A Multi-Knowledge Distillation Framework</div>
+                <div class="pub-authors">Y. Abbas, A. Badawy, M. Mahfouz, S. Hussein, S. Ayman, H. Eraqi, C. Salama</div>
+                <div class="pub-venue">International Journal of Computing and Digital Systems (IJCDS), 18(1), 1–9, 2025</div>
+                <div class="pub-links">
+                    <a href="https://doi.org/10.12785/ijcds/1571065777" target="_blank">Paper</a>
+                    <a href="https://doi.org/10.12785/ijcds/1571065777" target="_blank">DOI</a>
+                </div>
+            </div>
+
+            <div class="pub-item">
+                <div class="pub-title">Configuring a Wireless Network Using Synthetic Wireless Traffic Data <span class="pub-badge badge-patent">Patent Pending</span></div>
+                <div class="pub-authors">Y. Abbas et al. (Dell Technologies)</div>
+                <div class="pub-venue">U.S. Patent Application, File No. DELLP1401US, filed 2024</div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <p>
+                <strong>MASc, Electrical &amp; Computer Engineering</strong> — Concordia University, Montréal (2024–2026)<br>
+                <span style="color: var(--muted); font-size: 0.93rem;">GPA: 4.3/4.3 · Thesis: LLM-Based Fairness Co-Auditing for Machine Learning Systems</span>
+            </p>
+            <p>
+                <strong>BSc, Computer Engineering, Minor in Mathematics</strong> — American University in Cairo (2017–2022)<br>
+                <span style="color: var(--muted); font-size: 0.93rem;">GPA: 3.71/4.0 · Al Ghurair STEM Scholar (full-ride, 5% acceptance rate) · Dean's List (4 years)</span>
+            </p>
+        </section>
+
+        <footer>
+            &copy; 2026 Yahya Abbas · Last updated March 2026
+        </footer>
+
+    </div>
+</body>
+</html>
